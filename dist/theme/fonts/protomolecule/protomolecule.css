@@ -1,0 +1,34 @@
+@font-face {
+    font-family: 'Protomolecule';
+    src: url('./Protomolecule-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Protomolecule';
+    src: url('./Protomolecule-Bold.ttf') format('truetype');
+    font-style: normal;
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Protomolecule';
+    src: url('./Protomolecule-Medium.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Protomolecule';
+    src: url('./Protomolecule-Black.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: 'Protomolecule';
+    src: url('./Protomolecule-Light.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 300;
+}

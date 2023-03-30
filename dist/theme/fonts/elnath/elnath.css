@@ -1,0 +1,7 @@
+@font-face {
+    font-family: 'Protomolecule';
+    src: url('./ELNATH.ttf') format('truetype'),
+        url('./ELNATH.otf') format('opentype');
+    font-style: normal;
+    font-weight: normal;
+}

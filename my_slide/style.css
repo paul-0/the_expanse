@@ -1,0 +1,285 @@
+
+.reveal {
+    --bg-color: #000209;
+    --text-color: #bbb0ff;
+
+    color: var(--text-color);
+    background-color: var(--bg-color);
+
+    user-select: none;
+}
+
+.protofont {
+    font-family: 'Protomolecule', 'Elnath', cursive;
+}
+
+.slide-number {
+    font-size: xx-large !important;
+    font-weight: bold !important;
+}
+
+.section-title {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.slides {
+    position: relative;
+}
+
+.slides > section {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide-title {
+    font-weight: bold;
+    font-size: 3em;
+    text-align: left;
+    position: absolute;
+    bottom: 0;
+    z-index: 100;
+
+    text-shadow: var(--bg-color) 0 0 50px;
+}
+
+#spaceship {
+    height: 100%;
+    width: 100%;
+    animation: float 5s ease-in-out infinite;
+    position: absolute;
+    transition: top 1s, right 1s;
+}
+#spaceship.pos-0 {
+    top: 0;
+    right: 0;
+}
+#spaceship.pos-1 {
+    top: -200%;
+    right: -200%;
+}
+@keyframes float {
+    0% {
+        translate: 0 0;
+    }
+    50% {
+        translate: 10px 15px;
+    }
+    100% {
+        translate: 0 0;
+    }
+}
+img.ship {
+    position: relative;
+    top: -50%;
+    right: -40%;
+    z-index: 10;
+}
+.trail {
+    position: absolute;
+    z-index: 1;
+    top: 40%;
+    right: 28%;
+    width: 100%;
+    height: 100%;
+}
+.trail > .big-trail {
+    position: absolute;
+    top: 25%;
+    right: 15%;
+    width: 40%;
+    height: 0;
+    rotate: -28deg;
+    background-color: rgba(116, 232, 248, 0.71);
+    box-shadow: 0 0 200px 120px rgba(116, 232, 248);
+    transition: opacity 1s;
+}
+.trail > .little-trail {
+    display: inline-block;
+    height: 2px;
+    width: 40px;
+    background-color: rgba(116, 232, 248, 0.71);
+    box-shadow: 0 0 20px 7px rgba(116, 232, 248);
+    rotate: -28deg;
+    z-index: 11;
+    position: absolute;
+    animation: trail 1s ease-in-out infinite;
+    transition: opacity 1s;
+}
+@keyframes trail {
+    0% {
+        translate: 0 0;
+        opacity: 1;
+    }
+    100% {
+        translate: -700px 400px;
+        opacity: 0;
+    }
+}
+
+#mars {
+    position: absolute;
+    z-index: 0;
+    top: -5%;
+    left: 50%;
+    transition: top 1s, left 1s, transform 1s;
+}
+#mars.pos-1 {
+    top: -10%;
+    left: -30%;
+    transform: scale(1.5);
+}
+#mars.pos-2 {
+    z-index: 1000;
+    top: 0;
+    left: 410%;
+    transform: scale(2);
+    transition: top 1s, left 2s ease-in-out, transform 1s ease-in-out;
+}
+#mars.pos-3 {
+    top: -120%;
+    left: 50%;
+    translate: -50% 0;
+    scale: 1.5;
+}
+#mars.pos-end {
+    transition: top 1s ease-out;
+    top: -10px;
+    left: 50%;
+    translate: -50% -50%;
+    scale: 1.5;
+}
+
+#slide-2 > .spaceship .big-trail, #slide-2 > .spaceship .little-trail {
+    opacity: 0;
+    animation: none;
+}
+#slide-2 > .slide-title {
+    translate: 0 -100px;
+    opacity: 0;
+}
+#slide-2 > ol {
+    font-weight: bold;
+    position: relative;
+    z-index: 100;
+    width: 100%;
+    justify-content: right;
+    margin: 0;
+}
+#slide-2 li {
+    width: max-content;
+    margin: 0.5em 0.5em 0.5em auto;
+}
+#slide-2 .section-title {
+    text-align: right;
+    padding-right: 1em;
+}
+#slide-2 .content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+#slide-3 .img-container {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    box-shadow: inset 0 0 8px var(--bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#slide-3 .img-container > img {
+    position: absolute;
+    z-index: -1;
+    min-height: 100%;
+    min-width: 100%;
+    left: 0;
+    margin: 0;
+    object-fit: cover;
+    object-position: left;
+}
+#slide-3 .content > .section-title {
+    text-align: end;
+    position: absolute;
+    top: 0;
+    left: 5%;
+}
+
+.slides-epstein#slide-5 .img-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80%;
+    width: 100%;
+    position: relative;
+}
+.slides-epstein#slide-4 .img-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    min-height: 80%;
+    width: 100%;
+    position: relative;
+}
+.slides-epstein#slide-5 .img-container > .img1 {
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    width: 60%;
+}
+.slides-epstein#slide-4 .img-container > .img1 {
+    position: absolute;
+    z-index: 0;
+    left: 1em;
+    width: 60%;
+}
+.slides-epstein#slide-5 .img-container > .img2 {
+    position: absolute;
+    rotate: 25deg;
+    left: -20%;
+    scale: 0.6;
+    z-index: -1;
+}
+.slides-epstein#slide-4 .img-container > .img2 {
+    left: 0;
+    z-index: 1;
+    margin: 0;
+}
+.slides-epstein .img-container > p {
+    position: absolute;
+    z-index: 2;
+    font-size: 0.8em;
+    top: 0;
+}
+.slides-epstein .img-container > p.subtitle {
+    right: 1em;
+}
+
+#slide-7 .img-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    min-height: 80%;
+    width: 100%;
+    position: relative;
+}
+#slide-7 .img-container > img {
+    position: absolute;
+}
+
+#slide-end .section-title {
+    margin: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
